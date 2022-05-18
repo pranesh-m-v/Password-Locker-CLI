@@ -1,0 +1,64 @@
+// this function displaysthe table of contents
+void contents()
+{
+    int index = 0;
+    printf("1. Add Password\n");
+    printf("2. Delete Password\n");
+    printf("3. View all saved Passwords\n");
+    printf("4. Delete all saved Passwords\n");
+    printf("5. View last Password\n");
+    printf("6. Edit Password\n");
+    printf("7. Logout\n");
+    printf("8. Exit application\n\n");
+    printf("Press the index number to go further.\n");
+    scanf("%d", &index);
+    switch(index)   //switch case makes the function call
+    {
+        case 1:
+        {
+            addPassword();
+            break;
+        }
+        case 2:
+        {
+            deletePassword();//delPassword();
+            break;
+        }
+        case 3:
+        {
+            viewAllSavedPasswords();
+            break;
+        }
+        case 4:
+        {
+            deleteAllSavedPasswords();
+            break;
+        }
+        case 5:
+        {
+            viewLastPassword();
+            break;
+        }
+        case 6:
+        {
+            editPassword();
+            break;
+        }
+        case 7:
+        {
+            main();
+            break;
+        }
+        case 8:
+        {
+            exit(1);
+            break;
+        }
+        default:
+        {
+            printf("invalid index value! please enter valid index value\n");
+            contents();
+        }
+    }
+    
+}
