@@ -1,0 +1,14 @@
+//saves the application name in the applicationArray
+void saveApplicationName(char application[])
+{
+    int count = 0;
+    while(strlen(applicationArray[count]))
+    {
+        count++;
+    }
+    for(int i = 0; i< strlen(application); i++)
+    {
+        applicationArray[count][i] = application[i];
+    }
+    //puts(applicationArray[count]);
+}
